@@ -1,4 +1,5 @@
 def solution(id_list, report, k):
+    
     # (신고당한 사람, [신고한 사람 목록]) 생성
     report_string_set = set(report) # 중복 신고 제거
     report_set = dict()
