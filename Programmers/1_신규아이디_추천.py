@@ -31,3 +31,22 @@ def solution(new_id):
         new_id += new_id[-1] * (3 - len(new_id))
     
     return new_id
+
+# 정규 표현식 활용
+'''
+import re
+
+def solution(new_id):
+    id = new_id
+    
+    id = id.lower()                         # 1
+    id = re.sub("[^a-z0-9-_.]", "", id)     # 2
+    id = re.sub("\.{2,}", ".", id)          # 3
+    # id = re.sub("\.+", ".", id)           # 3
+    id = re.sub("^[.]|[.]$", "", id)        # 4
+    id = "a" if len(id) == 0 else id[:15]   # 5, 6-1
+    id = re.sub("[.]$", "", id)             # 6-2
+    id = id if len(id) > 2 else id + "".join(id[-1] for _ in range(3 - len(id))) # 7
+    
+    return id
+'''
