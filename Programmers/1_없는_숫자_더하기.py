@@ -5,3 +5,10 @@ def solution(numbers):
     
     answer = sum(list(sub_nums))
     return answer
+
+# 모든 원소는 서로 다르다는 조건 확인 후
+'''
+def solution(numbers):
+    answer = sum([i for i in range(10)]) - sum(numbers)
+    return answer
+'''
