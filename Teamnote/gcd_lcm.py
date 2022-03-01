@@ -19,7 +19,8 @@ def gcd(a, b):
 
 # lcm
 def lcm(a, b):
-  return int(a * b / gcd(a, b))
+  # return int(a * b / gcd(a, b))
+  return a * b // gcd(a, b)
 
 print(gcd(24, 27))
 print(lcm(24, 27))
