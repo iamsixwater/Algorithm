@@ -1,3 +1,4 @@
+# deque 활용
 from collections import deque
 
 def solution(priorities, location):
@@ -19,5 +20,22 @@ def solution(priorities, location):
                 location = len(queue) - 1
             else:
                 location -= 1
-    
     return count
+
+# tuple, any 사용
+'''
+def solution(properties, location):
+    queue = [(i, q) for i, q in enumerate(properties)]
+    answer = 0
+    
+    while True:
+        current = queue.pop(0)
+        if any(current[1] < q[1] for q in queue):
+            queue.append(current)
+        else:
+            answer += 1
+            if current[0] == location:
+                return answer
+            
+    return answer
+'''
